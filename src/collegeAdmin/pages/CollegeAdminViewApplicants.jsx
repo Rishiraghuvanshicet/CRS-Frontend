@@ -31,7 +31,7 @@ const CollegeAdminViewApplicants = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        "http://localhost:4000/api/v1/job/college",
+        "https://crs-backend-ddfk.onrender.com/api/v1/job/college",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -47,7 +47,7 @@ const CollegeAdminViewApplicants = () => {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:4000/api/v1/job/${jobId}`, {
+      await axios.delete(`https://crs-backend-ddfk.onrender.com/api/v1/job/${jobId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success("Job deleted successfully!");
@@ -69,7 +69,7 @@ const CollegeAdminViewApplicants = () => {
   const handleSave = async (jobId) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.put(`http://localhost:4000/api/v1/job/${jobId}`, updatedJob, {
+      await axios.put(`https://crs-backend-ddfk.onrender.com/api/v1/job/${jobId}`, updatedJob, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success("Job updated successfully!");

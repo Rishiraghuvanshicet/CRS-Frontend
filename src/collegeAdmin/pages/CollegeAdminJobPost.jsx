@@ -30,7 +30,7 @@ const CollegeAdminPostJob = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem("token");
-      await axios.post("http://localhost:4000/api/v1/job/create", formData, {
+      await axios.post("https://crs-backend-ddfk.onrender.com/api/v1/job/create", formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast.success("Job posted successfully!");

@@ -17,7 +17,7 @@ const CollegeAdminEditProfile = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/v1/user/profile", {
+      .get("https://crs-backend-ddfk.onrender.com/api/v1/user/profile", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((response) => {
@@ -50,7 +50,7 @@ const CollegeAdminEditProfile = () => {
       if (adminData.password) formData.append("password", adminData.password);
       if (adminData.cv) formData.append("cv", adminData.cv);
 
-      await axios.put("http://localhost:4000/api/v1/user/profile", formData, {
+      await axios.put("https://crs-backend-ddfk.onrender.com/api/v1/user/profile", formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "multipart/form-data",

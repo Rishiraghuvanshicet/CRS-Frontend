@@ -37,15 +37,15 @@ const CollegeAdminHomePage = () => {
       try {
         const token = localStorage.getItem("token");
         const jobResponse = await axios.get(
-          "http://localhost:4000/api/v1/job/getTotalJobsByCollege",
+          "https://crs-backend-ddfk.onrender.com/api/v1/job/getTotalJobsByCollege",
           { headers: { Authorization: `Bearer ${token}` } }
         );
         const studentResponse = await axios.get(
-          "http://localhost:4000/api/v1/college/getTotalStudentsByCollege",
+          "https://crs-backend-ddfk.onrender.com/api/v1/college/getTotalStudentsByCollege",
           { headers: { Authorization: `Bearer ${token}` } }
         );
         const timelineResponse = await axios.get(
-          "http://localhost:4000/api/v1/job/getJobPostingTimeline",
+          "https://crs-backend-ddfk.onrender.com/api/v1/job/getJobPostingTimeline",
           { headers: { Authorization: `Bearer ${token}` } }
         );
 

@@ -50,7 +50,7 @@ const RegisterCollege = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/college/register",
+        "https://crs-backend-ddfk.onrender.com/api/v1/college/register",
         collegeData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -83,7 +83,7 @@ const RegisterCollege = () => {
 
     try {
       await axios.post(
-        "http://localhost:4000/api/v1/user/register",
+        "https://crs-backend-ddfk.onrender.com/api/v1/user/register",
         adminData,
         { headers: { Authorization: `Bearer ${token}` } }
       );

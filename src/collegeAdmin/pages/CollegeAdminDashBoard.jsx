@@ -24,7 +24,7 @@ const CollegeAdminDashBoard = () => {
           return;
         }
 
-        const response = await axios.get("http://localhost:4000/api/v1/college/college-details", {
+        const response = await axios.get("https://crs-backend-ddfk.onrender.com/api/v1/college/college-details", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -53,7 +53,7 @@ const CollegeAdminDashBoard = () => {
       }
 
       await axios.put(
-        "http://localhost:4000/api/v1/college/update",
+        "https://crs-backend-ddfk.onrender.com/api/v1/college/update",
         collegeDetails,
         {
           headers: { Authorization: `Bearer ${token}` },

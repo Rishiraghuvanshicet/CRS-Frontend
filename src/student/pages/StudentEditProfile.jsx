@@ -66,7 +66,7 @@ const StudentEditProfile = () => {
 
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        "http://localhost:4000/api/v1/user/profile",
+        "https://crs-backend-ddfk.onrender.com/api/v1/user/profile",
         formData,
         {
           headers: {

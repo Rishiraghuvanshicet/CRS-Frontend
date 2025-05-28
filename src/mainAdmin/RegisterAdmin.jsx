@@ -20,7 +20,7 @@ const RegisterAdmin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:4000/api/v1/user/register", formData);
+      const response = await axios.post("https://crs-backend-ddfk.onrender.com/api/v1/user/register", formData);
       alert(response.data.message);
       navigate("/"); // Redirect to login
     } catch (error) {

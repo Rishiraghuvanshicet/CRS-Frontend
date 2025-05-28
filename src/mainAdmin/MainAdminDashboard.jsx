@@ -26,7 +26,7 @@ const MainAdminDashboard = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          "http://localhost:4000/api/v1/college/all",
+          "https://crs-backend-ddfk.onrender.com/api/v1/college/all",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -64,7 +64,7 @@ const MainAdminDashboard = () => {
       // Find the college name before deleting
       const collegeToDelete = colleges.find(college => college._id === id);
       
-      const response = await axios.delete(`http://localhost:4000/api/v1/college/${id}`, {
+      const response = await axios.delete(`https://crs-backend-ddfk.onrender.com/api/v1/college/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
   
