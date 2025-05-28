@@ -21,7 +21,7 @@ const JobDetails = () => {
       try {
         const token = localStorage.getItem("token");
         const res = await axios.get(
-          `http://localhost:4000/api/v1/job/college/${jobId}`,
+          `https://crs-backend-ddfk.onrender.com/api/v1/job/college/${jobId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }

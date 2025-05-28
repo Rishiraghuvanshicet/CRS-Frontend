@@ -22,7 +22,7 @@ const StudentDashboard = () => {
   const fetchJobs = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("http://localhost:4000/api/v1/job/college", {
+      const response = await axios.get("https://crs-backend-ddfk.onrender.com/api/v1/job/college", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setJobs(response.data || []);

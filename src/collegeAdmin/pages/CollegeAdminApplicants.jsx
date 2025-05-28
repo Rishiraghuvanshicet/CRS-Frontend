@@ -46,7 +46,7 @@ const CollegeAdminApplicants = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        "http://localhost:4000/api/v1/job/college",
+        "https://crs-backend-ddfk.onrender.com/api/v1/job/college",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -66,7 +66,7 @@ const CollegeAdminApplicants = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `http://localhost:4000/api/v1/application/applicants/${jobId}`,
+        `https://crs-backend-ddfk.onrender.com/api/v1/application/applicants/${jobId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -88,7 +88,7 @@ const CollegeAdminApplicants = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `http://localhost:4000/api/v1/application/update-status/${applicationId}`,
+        `https://crs-backend-ddfk.onrender.com/api/v1/application/update-status/${applicationId}`,
         { status },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -109,7 +109,7 @@ const CollegeAdminApplicants = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.delete(
-        `http://localhost:4000/api/v1/application/delete/${applicationId}`,
+        `https://crs-backend-ddfk.onrender.com/api/v1/application/delete/${applicationId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -165,7 +165,7 @@ const CollegeAdminApplicants = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `http://localhost:4000/api/v1/application/schedule-time/${selectedApplicantId}`,
+        `https://crs-backend-ddfk.onrender.com/api/v1/application/schedule-time/${selectedApplicantId}`,
         { scheduledTime },
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -19,7 +19,7 @@ const StudentEditProfile = () => {
     const fetchUserProfile = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:4000/api/v1/user/profile", {
+        const response = await axios.get("https://crs-backend-ddfk.onrender.com/api/v1/user/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUserData({

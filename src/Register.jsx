@@ -81,7 +81,7 @@ const Register = () => {
   const handleSendOtp = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/user/request-otp",
+        "https://crs-backend-ddfk.onrender.com/api/v1/user/request-otp",
         { email: formData.email }
       );
       toast.success(response.data.message);
@@ -99,7 +99,7 @@ const Register = () => {
     }
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/user/verify-otp",
+        "https://crs-backend-ddfk.onrender.com/api/v1/user/verify-otp",
         { email: formData.email, otp: formData.otp }
       );
       toast.success(response.data.message);
@@ -121,7 +121,7 @@ const Register = () => {
     } else {
       try {
         const response = await axios.post(
-          "http://localhost:4000/api/v1/user/register",
+          "https://crs-backend-ddfk.onrender.com/api/v1/user/register",
           formData
         );
         toast.success(response.data.message);
