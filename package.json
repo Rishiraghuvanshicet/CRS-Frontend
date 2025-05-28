@@ -16,7 +16,7 @@
     "@mui/material": "^6.4.7",
     "axios": "^1.8.1",
     "chart.js": "^4.4.8",
-    "cloudinary": "^2.5.1",
+    "cloudinary": "^1.30.0",
     "dayjs": "^1.11.13",
     "file-saver": "^2.0.5",
     "framer-motion": "^12.5.0",
